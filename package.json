@@ -4,7 +4,8 @@
   "description": "UIET Alumni Cell Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass views/static/scss/main.scss views/static/css/main.css"
   },
   "author": "Prerna",
   "license": "ISC",
