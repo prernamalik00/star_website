@@ -1,17 +1,32 @@
-body{
+body {
   overflow-x: hidden;
 }
+
 .headings {
-  color: darkred;
+  text-align: center;
+  color: #343a40;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.headings:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 4px solid #810000;
 }
 
 .scroll {
   background-color: white;
-  color: #8B0000;
+  color: #810000;
 }
 
 .scroll .nav-link, .scroll .navbar-brand {
-  color: #8B0000;
+  color: #810000;
 }
 
 nav {
@@ -46,7 +61,49 @@ nav .nav-link, nav .navbar-brand {
   padding: 40px;
 }
 
-.whatwedo .row {
-  padding: 20px 0 0 0;
+.whatwedo .separator {
+  padding: 20px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-height: 270px;
+}
+
+.whatwedo .whatwedocard {
+  border: 1px solid #f1f1f1;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  background-color: transparent;
+}
+
+.whatwedo .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.whatwedo .card-inner .card-front, .whatwedo .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.whatwedo .card-inner .card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.whatwedo .whatwedo-card:hover .card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 /*# sourceMappingURL=main.css.map */

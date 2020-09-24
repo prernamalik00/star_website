@@ -1,4 +1,4 @@
-// import header from 'views/header.js';
+
 const express = require("express");
 const bodyParser =  require("body-parser");
 
@@ -18,6 +18,3 @@ app.get("/", function(req, res){
 app.listen(3000, function(){
     console.log("Server running at port 3000");
 });
-
-//
-//
