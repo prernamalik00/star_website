@@ -47,9 +47,16 @@ body {
   width: 30px;
 }
 
+.separator {
+  padding: 20px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .headings {
   text-align: center;
   color: #343a40;
+  font-family: 'Cinzel', serif;
   display: inline-block;
   padding-bottom: 5px;
   position: relative;
@@ -101,15 +108,73 @@ nav .nav-link, nav .navbar-brand {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23808080' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
 }
 
+.get-involved-card {
+  padding: 40px;
+}
+
+.get-involved-card a {
+  color: #343a40;
+}
+
+.get-involved-card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.get-involved-card .card-inner .card-front, .get-involved-card .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.get-involved-card .card-inner .card-back {
+  opacity: 0;
+}
+
+.get-involved-card .separator {
+  min-height: 230px;
+  width: 230px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.get-involved-card .separator:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  background-color: #2A89D0;
+  color: white;
+}
+
+.get-involved-card .separator:hover .card-front {
+  opacity: 0;
+}
+
+.get-involved-card .separator:hover .card-back {
+  opacity: 1;
+}
+
 .whatwedo {
   background: #f5f5f5;
   padding: 40px;
 }
 
 .whatwedo .separator {
-  padding: 20px;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-height: 270px;
 }
 
@@ -439,21 +504,53 @@ input[type=submit]:hover {
     background-color: #450046;
   }
 }
+
+.team {
+  height: 100%;
+  width: 100%;
+}
+
+.team a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team a img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 2px 0px #000;
+          box-shadow: 0px 0px 2px 0px #000;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.team a img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-box-shadow: 0px 0px 10px 0px #000;
+          box-shadow: 0px 0px 10px 0px #000;
+}
+
+.member-name {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.team-position {
+  font-size: 12px;
+  padding-top: 2px;
+  padding-bottom: 20px;
+}
 /*# sourceMappingURL=main.css.map */
-
-/* css added by gaurav for about*/
-
-.col-md-4{
-  background: rgba(255, 255, 255, 0.4);
- 
-}
-.shadow-lg{
-  box-shadow: none !important;
-  
-}
-.separator img{
-  margin-top: 10%;
-  margin-bottom: 5%;
-  width: 60%;
-  border-radius: 20px;
-}

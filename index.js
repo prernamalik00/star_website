@@ -108,7 +108,8 @@ app.get("/", function(req, res){
 });
 
 app.get("/contact", (req, res)=>{
-    res.sendFile(path.join(__dirname, "/views/static/main.html"))
+    // res.sendFile(path.join(__dirname, "/views/contact.ejs"))
+    res.render('contact')
 })
 
 app.post('/', (req, res) => {
