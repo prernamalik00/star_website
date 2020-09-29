@@ -1,18 +1,67 @@
-$primaryColor: #8B0000;
+$primaryColor: #810000;
 $bgColor: #f5f5f5;
+$darkColor: #343a40;
+$darkColor2: #282d33;
 
+body {
+  overflow-x: hidden;
+}
+
+#navu {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.contentDiv {
+  position: fixed;
+
+}
+
+@keyframes bouncing {
+  0% {bottom: 0;}
+  50% {bottom: 20px;}
+  100% {bottom: 0;}
+}
+
+.arrow {
+  animation: bouncing 2s infinite ease-in-out;
+  bottom: 0;
+  display: block;
+  height: 30px;
+  left: 8%;
+  
+  margin-left: -25px;
+  position: absolute;
+  width: 30px;
+}
+
+//      HEADINGS
 
 .headings {
-  color: rgb(139, 0, 0);
+  text-align: center;
+  color: $darkColor;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+  
+}
+.headings:before{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 4px solid $primaryColor;
 }
 
 //        NAVBAR
 
 .scroll {
-  background-color: white;
-  color: $primaryColor;
+  background-color: black;
+  color: white;
   .nav-link, .navbar-brand{
-    color: $primaryColor;
+    color: white;
   }
 }
 
@@ -31,7 +80,7 @@ nav {
 #mainCarousel {
   .carousel-inner {
     img {
-      height: 550px;
+      height: 575px;
       width: 100%;
     }
   }
@@ -41,7 +90,7 @@ nav {
 
 .upcoming-events {
     background: $bgColor;
-    color: #808080;
+    
     .carousel-control-next-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23808080' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
     }
@@ -50,13 +99,355 @@ nav {
       }
 }
 
+
 //            WHAT WE DO
 
 .whatwedo {
   background: $bgColor;
     padding: 40px;
-    .row {
-      padding: 20px 0 0 0;
+    
+    .separator {
+      padding: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      min-height: 270px; 
+    }
+    .whatwedocard {
+      border: 1px solid #f1f1f1;
+      perspective: 1000px;
+      background-color: transparent;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+      .card-back {
+        transform: rotateY(180deg);
+      }
     }
     
+    .whatwedo-card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
 }
+
+
+
+.youtube {    
+ background-image: url("images/ybg.jpg");
+ background-color: black;
+ padding: 40px;
+}
+
+//          gallery
+
+
+
+.gallery
+
+{   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000000;
+
+}
+
+.box {
+        
+position: relative;
+width: 200px;
+height: 200px;
+transform-style: preserve-3d;
+animation: animate 20s linear infinite;
+
+     span {
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             transform-origin: center;
+             transform-style: preserve-3d;
+             transform: rotateY(calc(var(--i) * 45deg )) translateZ(400px);
+          
+
+                  img{
+                    position: absolute;
+                     top: 0;
+                    left: 0;
+                    width: 200px;
+                     height: 200px;
+                     object-fit: cover;
+                  }
+     }
+     
+}
+
+@keyframes animate
+
+{
+  0%{
+    transform: perspective(1000px) rotateY(0deg)
+  }
+  100%
+  {transform: perspective(1000px) rotateY(360deg);}
+
+}
+
+
+
+
+//          fOOTER
+
+
+footer {
+
+  background-image: url("images/UIET.jpg") ;
+  background-color: $darkColor;
+
+  .footer-bottom {
+    background-color: $darkColor2;
+
+    background-image: url("images/UIET.jpg") ;
+    color: grey;
+    text-align: center;
+    
+
+    ul.social-network {
+        list-style: none;
+        display: inline;
+        margin: auto;
+      
+      li{
+        display: inline;
+        margin: 0 2px;
+      }
+    }
+
+    /*          footer social icons        */
+    
+    .social-network{
+      a.icoFacebook:hover {
+        background-color: #3B5998;
+    }
+    a.icoYoutube:hover {
+      background-color: red;
+  }
+      a.icoLinkedin:hover {
+        background-color: #007bb7;
+    }
+      a.icoInstagram:hover {
+        background: #f09433;
+        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+      }
+    }
+    
+    .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+        color: $darkColor2;
+    }
+    
+    .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+    
+    .social-circle li i {
+        margin: 0;
+        line-height: 60px;
+        text-align: center;
+    }
+    
+    .social-circle li a:hover i, .triggeredHover {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms--transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    
+    .social-circle i {
+        color: #fff;
+        -webkit-transition: all 0.8s;
+        -moz-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        -ms-transition: all 0.8s;
+        transition: all 0.8s;
+    }
+    
+    .social-circle a {
+        background-color: $darkColor2;
+    }
+    
+    @media screen and (max-width: 500px) {
+        ul.social-network li {
+            display: inline;
+            margin: 0 5px;
+        }
+    }
+    
+    @media screen and (max-width: 450px) {
+        ul.social-network li {
+            display: inline;
+            margin: 0 5px;
+        }
+        .social-circle li a {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+        }
+        .social-circle li i {
+            margin: 0;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+    
+    @media screen and (max-width: 350px) {
+        ul.social-network li {
+            display: inline;
+            margin: 0 2px;
+        }
+        .social-circle li a {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+        }
+        .social-circle li i {
+            margin: 0;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+  
+  
+  }
+}
+
+// CONTACT US PAGE
+
+/*# contact us form css*/
+
+
+input[type=text],input[type=email] ,select,textarea {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #450046;
+}
+
+#contactus {
+ 
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.responsive {
+    padding-top: 2%;
+    padding-left: 2%;
+  width: 50%;
+  height: auto;
+  position: relative;
+   }
+   #circle {
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+   
+   
+@media only screen and (max-width: 600px)   {
+
+      .responsive {
+           position: top;
+           width: 100%;
+  height: auto;
+      }
+      
+      input[type=text],input[type=email] ,select,textarea {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 70%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #450046;
+}
+}
+  
+
+ 
