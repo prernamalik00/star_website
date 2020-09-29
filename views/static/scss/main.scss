@@ -7,6 +7,34 @@ body {
   overflow-x: hidden;
 }
 
+#navu {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.contentDiv {
+  position: fixed;
+
+}
+
+@keyframes bouncing {
+  0% {bottom: 0;}
+  50% {bottom: 20px;}
+  100% {bottom: 0;}
+}
+
+.arrow {
+  animation: bouncing 2s infinite ease-in-out;
+  bottom: 0;
+  display: block;
+  height: 30px;
+  left: 8%;
+  
+  margin-left: -25px;
+  position: absolute;
+  width: 30px;
+}
+
 //      HEADINGS
 
 .headings {
@@ -30,10 +58,10 @@ body {
 //        NAVBAR
 
 .scroll {
-  background-color: white;
-  color: $primaryColor;
+  background-color: black;
+  color: white;
   .nav-link, .navbar-brand{
-    color: $primaryColor;
+    color: white;
   }
 }
 
@@ -52,7 +80,7 @@ nav {
 #mainCarousel {
   .carousel-inner {
     img {
-      height: 550px;
+      height: 575px;
       width: 100%;
     }
   }
@@ -112,11 +140,86 @@ nav {
     }
 }
 
+
+
+.youtube {    
+ background-image: url("images/ybg.jpg");
+ background-color: black;
+ padding: 40px;
+}
+
+//          gallery
+
+
+
+.gallery
+
+{   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000000;
+
+}
+
+.box {
+        
+position: relative;
+width: 200px;
+height: 200px;
+transform-style: preserve-3d;
+animation: animate 20s linear infinite;
+
+     span {
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             transform-origin: center;
+             transform-style: preserve-3d;
+             transform: rotateY(calc(var(--i) * 45deg )) translateZ(400px);
+          
+
+                  img{
+                    position: absolute;
+                     top: 0;
+                    left: 0;
+                    width: 200px;
+                     height: 200px;
+                     object-fit: cover;
+                  }
+     }
+     
+}
+
+@keyframes animate
+
+{
+  0%{
+    transform: perspective(1000px) rotateY(0deg)
+  }
+  100%
+  {transform: perspective(1000px) rotateY(360deg);}
+
+}
+
+
+
+
 //          fOOTER
 
+
 footer {
+
+  background-image: url("images/UIET.jpg") ;
+  background-color: $darkColor;
+
   .footer-bottom {
     background-color: $darkColor2;
+
+    background-image: url("images/UIET.jpg") ;
     color: grey;
     text-align: center;
     
@@ -131,7 +234,7 @@ footer {
         margin: 0 2px;
       }
     }
-    
+
     /*          footer social icons        */
     
     .social-network{
@@ -293,7 +396,7 @@ input[type=submit]:hover {
 #contactus {
  
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 20px;
 }
 
