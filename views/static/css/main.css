@@ -440,3 +440,20 @@ input[type=submit]:hover {
   }
 }
 /*# sourceMappingURL=main.css.map */
+
+/* css added by gaurav for about*/
+
+.col-md-4{
+  background: rgba(255, 255, 255, 0.4);
+ 
+}
+.shadow-lg{
+  box-shadow: none !important;
+  
+}
+.separator img{
+  margin-top: 10%;
+  margin-bottom: 5%;
+  width: 60%;
+  border-radius: 20px;
+}
