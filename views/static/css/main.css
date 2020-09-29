@@ -11,6 +11,18 @@ body {
   position: fixed;
 }
 
+@-webkit-keyframes bouncing {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
 @keyframes bouncing {
   0% {
     bottom: 0;
@@ -24,7 +36,8 @@ body {
 }
 
 .arrow {
-  animation: bouncing 2s infinite ease-in-out;
+  -webkit-animation: bouncing 2s infinite ease-in-out;
+          animation: bouncing 2s infinite ease-in-out;
   bottom: 0;
   display: block;
   height: 30px;
@@ -62,6 +75,7 @@ body {
 }
 
 nav {
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   background-color: transparent;
 }
@@ -94,13 +108,15 @@ nav .nav-link, nav .navbar-brand {
 
 .whatwedo .separator {
   padding: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-height: 270px;
 }
 
 .whatwedo .whatwedocard {
   border: 1px solid #f1f1f1;
-  perspective: 1000px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
   background-color: transparent;
 }
 
@@ -109,24 +125,31 @@ nav .nav-link, nav .navbar-brand {
   width: 100%;
   height: 100%;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
   transition: transform 0.8s;
-  transform-style: preserve-3d;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .whatwedo .card-inner .card-front, .whatwedo .card-inner .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
 }
 
 .whatwedo .card-inner .card-back {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .whatwedo .whatwedo-card:hover .card-inner {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .youtube {
@@ -136,9 +159,15 @@ nav .nav-link, nav .navbar-brand {
 }
 
 .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   background: #000000;
 }
@@ -147,8 +176,10 @@ nav .nav-link, nav .navbar-brand {
   position: relative;
   width: 200px;
   height: 200px;
-  transform-style: preserve-3d;
-  animation: animate 20s linear infinite;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: animate 20s linear infinite;
+          animation: animate 20s linear infinite;
 }
 
 .box span {
@@ -157,9 +188,12 @@ nav .nav-link, nav .navbar-brand {
   left: 0;
   width: 100%;
   height: 100%;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+          transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
 }
 
 .box span img {
@@ -168,15 +202,29 @@ nav .nav-link, nav .navbar-brand {
   left: 0;
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: perspective(1000px) rotateY(0deg);
+            transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateY(360deg);
+            transform: perspective(1000px) rotateY(360deg);
+  }
 }
 
 @keyframes animate {
   0% {
-    transform: perspective(1000px) rotateY(0deg);
+    -webkit-transform: perspective(1000px) rotateY(0deg);
+            transform: perspective(1000px) rotateY(0deg);
   }
   100% {
-    transform: perspective(1000px) rotateY(360deg);
+    -webkit-transform: perspective(1000px) rotateY(360deg);
+            transform: perspective(1000px) rotateY(360deg);
   }
 }
 
@@ -248,11 +296,13 @@ footer .footer-bottom .social-circle li a:hover i, footer .footer-bottom .trigge
   -webkit-transform: rotate(360deg);
   -ms--transform: rotate(360deg);
   transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 footer .footer-bottom .social-circle i {
   color: #fff;
+  -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
 
@@ -319,7 +369,8 @@ input[type=text], input[type=email], select, textarea {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 input[type=submit] {
@@ -371,7 +422,8 @@ input[type=submit]:hover {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   input[type=submit] {
     width: 70%;

@@ -13,9 +13,14 @@ app.get("/", function(req, res){
     res.render('index');
 });
 
+app.get("/initiatives", function(req, res){
+    res.render('initiatives');
+});
+
 app.get("/contact", function(req, res){
     res.render('contact');
 });
+
 
 
 app.listen(3000, function(){
