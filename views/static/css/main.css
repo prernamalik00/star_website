@@ -2,6 +2,38 @@ body {
   overflow-x: hidden;
 }
 
+#navu {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.contentDiv {
+  position: fixed;
+}
+
+@keyframes bouncing {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.arrow {
+  animation: bouncing 2s infinite ease-in-out;
+  bottom: 0;
+  display: block;
+  height: 30px;
+  left: 8%;
+  margin-left: -25px;
+  position: absolute;
+  width: 30px;
+}
+
 .headings {
   text-align: center;
   color: #343a40;
@@ -21,16 +53,15 @@ body {
 }
 
 .scroll {
-  background-color: white;
-  color: #810000;
+  background-color: black;
+  color: white;
 }
 
 .scroll .nav-link, .scroll .navbar-brand {
-  color: #810000;
+  color: white;
 }
 
 nav {
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   background-color: transparent;
 }
@@ -40,7 +71,7 @@ nav .nav-link, nav .navbar-brand {
 }
 
 #mainCarousel .carousel-inner img {
-  height: 550px;
+  height: 575px;
   width: 100%;
 }
 
@@ -63,15 +94,13 @@ nav .nav-link, nav .navbar-brand {
 
 .whatwedo .separator {
   padding: 20px;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-height: 270px;
 }
 
 .whatwedo .whatwedocard {
   border: 1px solid #f1f1f1;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  perspective: 1000px;
   background-color: transparent;
 }
 
@@ -80,38 +109,88 @@ nav .nav-link, nav .navbar-brand {
   width: 100%;
   height: 100%;
   text-align: center;
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
   transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .whatwedo .card-inner .card-front, .whatwedo .card-inner .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
 }
 
 .whatwedo .card-inner .card-back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .whatwedo .whatwedo-card:hover .card-inner {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.youtube {
+  background-image: url("images/ybg.jpg");
+  background-color: black;
+  padding: 40px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+
+.box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+footer {
+  background-image: url("images/UIET.jpg");
+  background-color: #343a40;
 }
 
 footer .footer-bottom {
   background-color: #282d33;
+  background-image: url("images/UIET.jpg");
   color: grey;
   text-align: center;
-  /*          footer social icons          */
+  /*          footer social icons        */
 }
 
 footer .footer-bottom ul.social-network {
@@ -169,13 +248,11 @@ footer .footer-bottom .social-circle li a:hover i, footer .footer-bottom .trigge
   -webkit-transform: rotate(360deg);
   -ms--transform: rotate(360deg);
   transform: rotate(360deg);
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 footer .footer-bottom .social-circle i {
   color: #fff;
-  -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
 
@@ -231,6 +308,83 @@ footer .footer-bottom .social-circle a {
     margin: 0;
     line-height: 40px;
     text-align: center;
+  }
+}
+
+/*# contact us form css*/
+input[type=text], input[type=email], select, textarea {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #450046;
+}
+
+#contactus {
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.responsive {
+  padding-top: 2%;
+  padding-left: 2%;
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+
+#circle {
+  background: lightblue;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive {
+    position: top;
+    width: 100%;
+    height: auto;
+  }
+  input[type=text], input[type=email], select, textarea {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+    width: 70%;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #450046;
   }
 }
 /*# sourceMappingURL=main.css.map */
