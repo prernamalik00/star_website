@@ -34,6 +34,20 @@ body {
   width: 30px;
 }
 
+.pagehead {
+  height: 250px;
+  width: 100%;
+  background-image: url("bgimg/img1.jpg");
+}
+
+#page-title {
+  text-align: center;
+  color: white;
+  padding-top: 20vh;
+  padding-bottom: 22vh;
+  background: #00000070;
+}
+
 .headings {
   text-align: center;
   color: #343a40;
