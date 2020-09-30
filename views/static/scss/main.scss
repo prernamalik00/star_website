@@ -114,6 +114,10 @@ nav {
   &-card {
     padding: 40px;
   }
+  .mx-10 {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
   &-card {
     a {
       color: $darkColor;
@@ -137,14 +141,14 @@ nav {
       }
     }
     .separator {
-      min-height: 230px;
-      width: 230px;
+      min-height: 200px;
+      width: 200px;
       border-radius: 50%; 
       background-color: $bgColor;
       transition: transform 0.4s;
     }
     .separator:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
       transition: transform 0.2s;
       background-color: $bgColorPrimary;
       color: white;

@@ -112,6 +112,11 @@ nav .nav-link, nav .navbar-brand {
   padding: 40px;
 }
 
+.get-involved .mx-10 {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
 .get-involved-card a {
   color: #343a40;
 }
@@ -140,8 +145,8 @@ nav .nav-link, nav .navbar-brand {
 }
 
 .get-involved-card .separator {
-  min-height: 230px;
-  width: 230px;
+  min-height: 200px;
+  width: 200px;
   border-radius: 50%;
   background-color: #f5f5f5;
   -webkit-transition: -webkit-transform 0.4s;
@@ -151,8 +156,8 @@ nav .nav-link, nav .navbar-brand {
 }
 
 .get-involved-card .separator:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
