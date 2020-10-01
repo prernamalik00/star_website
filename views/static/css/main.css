@@ -14,7 +14,7 @@ body {
 .pagehead {
   height: 250px;
   width: 100%;
-  background-image: url("bgimg/img1.jpg");
+  
 }
 
 #page-title {
@@ -102,10 +102,6 @@ nav {
 
 nav .nav-link, nav .navbar-brand {
   color: white;
-}
-
-#mainCarousel .carousel-inner {
-  background-color: #00000070;
 }
 
 #mainCarousel .carousel-inner img {
