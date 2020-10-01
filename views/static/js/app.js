@@ -10,3 +10,4 @@ function myFunction() {
     nav.classList.remove("scroll", "shadow-sm");
   }
 }
+

@@ -1,18 +1,77 @@
 <%- include("partials/header"); -%>
 
-<section class="pagehead">
+<section class="pagehead" background-image: url('bgimg/img1.jpg');>
 
   <div>
 
   <h1 id="page-title"> CONTACT US</h1>
 
 </div>
-  
+</section>
+
+
+<section>
+  <div>
+<div class="bg-contact100" >
+  <div class="container-contact100">
+    <div class="wrap-contact100">
+      <div class="contact100-pic" data-tilt>
+        <img src="images/Contact.gif" alt="IMG">
+      </div>
+
+      <form class="contact100-form validate-form">
+        <span class="contact100-form-title">
+          Get in touch
+        </span>
+<br>
+        <div class="wrap-input100 validate-input" data-validate = "Name is required">
+          <input class="input100" type="text" name="name" placeholder="Name">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" name="email" placeholder="Email">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </span>
+        </div>
+       
+
+        <div class="wrap-input100 validate-input" data-validate = "Message is required">
+          <textarea class="input100" name="message" placeholder="Message"></textarea>
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100" style="padding-top: 2vh;" >
+          <select  class="input100"  name="from">
+          
+            <option value="Select">Select (Send as)</option>
+            <option value="Student">Student</option>
+            <option value="Staff">Staff</option>
+            <option value="Alumni">Alumni</option>
+            <option value="Institution">Institution / Club </option>
+             <option value="Company">Company</option>
+          </select>
+        </div>
+        <div class="container-contact100-form-btn">
+          <button class="contact100-form-btn">
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
 </section>
 
 
 
- <!--            CONTACT US           -->
+ <!--            
 
  
  <div  id="contactus">
@@ -22,7 +81,7 @@
     <div align="center">
       <div class="card">
 
-        <!-- Card body -->
+       
         <div class="card-body">   
       <form action="">
         
@@ -55,6 +114,7 @@
   </div>
     
     
-</div>
+</div> -->
+
 
 <%- include("partials/footer"); -%>
