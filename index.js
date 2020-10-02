@@ -108,7 +108,6 @@ app.get("/", function(req, res){
 });
 
 app.get("/contact", (req, res)=>{
-    // res.sendFile(path.join(__dirname, "/views/contact.ejs"))
     res.render('contact')
 })
 
@@ -133,6 +132,10 @@ app.post('/', (req, res) => {
     let UserData = [[req.body.email], [req.body.firstname], [req.body.from], [req.body.msg]];
     writeData(auth, UserData);
 })
+
+app.get("/our-team", (req, res)=>{
+    res.render('our-team');
+});
 
 app.listen(3000, function(){
     console.log("Server running at port 3000");
