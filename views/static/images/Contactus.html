@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text],input[type=email] ,select,textarea {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #450046;
+}
+
+#contactus {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+
+
+<div align="center" id="contactus">
+<h2>Contact Us</h2>
+
+  <form action="">
+    
+    <label for="email"></label>
+    <input type="email" id="email" name="email" placeholder="Enter email ID"><br>
+  
+    <label for="fname"></label>
+    <input type="text" id="fname" name="firstname" placeholder="Enter name"><br>
+
+ <label for="country"></label>
+    <select id="from" name="from">
+      <option value="Select">Select</option>
+      <option value="Student">Student</option>
+      <option value="Staff">Staff</option>
+      <option value="Alumni">Alumni</option>
+      <option value="Institution">Institution</option>
+       <option value="Company">Company</option>
+    </select> <br>
+
+    
+    <textarea id="msg" name="msg" placeholder="Your message" style="height:200px"></textarea>
+  <br>
+      <input type="submit" value="Submit">
+      
+  </form>
+</div>
+
+</body>
+</html>
