@@ -7,6 +7,9 @@ const e = require('express');
 const { strict } = require('assert');
 const path = require('path');
 const {google} = require('googleapis');
+// var ghpages = require('gh-pages');
+ 
+// ghpages.publish('dist', function(err) {});
 
 
 
