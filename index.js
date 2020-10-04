@@ -1,9 +1,7 @@
-// import header from 'views/header.js';
-const express = require('express');
 
+const express = require('express');
 const app = express();
 
-// const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const e = require('express');
 const { strict } = require('assert');
@@ -67,7 +65,7 @@ async function registerData(arr){
             requestBody: {
                 data: [
                     {
-                        range: `Sheet1!A${register}:D${register}`,
+                        range: `Sheet1!A${register}:O{register}`,
                         majorDimension: "COLUMNS",
                         values: arr
                     }
@@ -100,7 +98,7 @@ app.post('/', (req, res) => {
 app.post('/register', (req,res)=>{
     console.log(req.body);
 
-    let UserData = [/*  pass the request body parameters in each inside the array */];
+    let UserData = [[req.body.firstname], [req.body.lastname], [req.body.email], [req.body.contact], [req.body.course], [req.body.branch], [req.body.city], [req.body.organisation], [req.body.designation], [req.body.exams], [req.body.examyear], [req.body.course], [req.body.institute], [req.body.year]];
     registerData(UserData);
     res.render('index');
 })
