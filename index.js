@@ -89,7 +89,6 @@ app.get("/register", function(req, res){
 });
 
 app.get("/contact", (req, res)=>{
-    // res.sendFile(path.join(__dirname, "/views/static/main.html"))
     res.render('contact')
 })
 
@@ -113,6 +112,10 @@ app.post('/register', (req,res)=>{
 
 app.get("/our-team", (req, res)=>{
     res.render('our-team');
+});
+
+app.get("/aboutus", (req, res)=>{
+    res.render('aboutus');
 });
 
 app.listen(3000, function(){
