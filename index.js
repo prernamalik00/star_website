@@ -1,4 +1,4 @@
-
+// import header from 'views/header.js';
 const express = require('express');
 const app = express();
 
@@ -7,6 +7,9 @@ const e = require('express');
 const { strict } = require('assert');
 const path = require('path');
 const {google} = require('googleapis');
+// var ghpages = require('gh-pages');
+ 
+// ghpages.publish('dist', function(err) {});
 
 
 
@@ -83,7 +86,6 @@ app.get("/", function(req, res){
 });
 
 app.get("/contact", (req, res)=>{
-    // res.sendFile(path.join(__dirname, "/views/static/main.html"))
     res.render('contact')
 })
 
@@ -105,7 +107,13 @@ app.post('/register', (req,res)=>{
     res.render('index');
 })
 
-app.listen(3000)
+app.get("/our-team", (req, res)=>{
+    res.render('our-team');
+});
+
+app.listen(3000, function(){
+    console.log("Server running at port 3000");
+});
 
 
 
