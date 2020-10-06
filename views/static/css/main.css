@@ -130,27 +130,43 @@ nav .nav-link, nav .navbar-brand {
   color: white;
 }
 
-nav .nav-item:hover {
-  overflow: hidden;
+nav .nav-item:hover .nav-item:focus .sub-menu,
+nav .nav-item:focus-within .sub-menu,
+nav .nav-item:hover .sub-menu {
+  visibility: visible;
+  /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
   background-color: #000000b3;
-  border-radius: 3px;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+          transition-delay: 0s, 0s, 0.3s;
+  /* this removes the transition delay so the menu will be visible while the other styles transition */
 }
 
-nav .nav-item:hover .dropdown-menu {
-  z-index: 2;
-  display: block;
+nav .sub-menu {
+  visibility: hidden;
+  /* hides sub-menu */
+  opacity: 0;
   position: absolute;
-  margin-top: 15px;
-  margin-left: -15px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+  z-index: -1;
+  -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
-nav .nav-item:hover .dropdown-menu ul {
+nav .sub-menu a {
+  color: white;
   display: block;
-  margin: 10px;
-}
-
-nav .dropdown-menu {
-  display: none;
+  padding: 0.5em 1em;
+  text-decoration: none;
 }
 
 #mainCarousel .carousel-inner {

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-// import header from 'views/header.js';
-=======
-
->>>>>>> c6fb7792d14d9f3da9e9b175c7ee7cec35fc6d54
 const express = require('express');
 const app = express();
 
@@ -89,11 +84,12 @@ app.get("/", function(req, res){
     res.render('index');
 });
 
+app.get("/register", function(req, res){
+    res.render('Alum-reg');
+});
+
 app.get("/contact", (req, res)=>{
-<<<<<<< HEAD
-=======
     // res.sendFile(path.join(__dirname, "/views/static/main.html"))
->>>>>>> c6fb7792d14d9f3da9e9b175c7ee7cec35fc6d54
     res.render('contact')
 })
 
