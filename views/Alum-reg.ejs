@@ -10,19 +10,19 @@
     <form method="POST" target="/register" class="my-5" style="width: 500px; margin: auto;">
         <div class="form-group">
             <label for="name">First Name</label>
-            <input class="form-control" id="name" name="firstname" placeholder="Enter Your Good Name">
+            <input required required class="form-control" id="name" name="firstname" placeholder="Enter Your Good Name">
         </div>
         <div class="form-group">
             <label for="lastname">Last Name</label>
-            <input class="form-control" id="name" name="lastname" placeholder="Enter Your Last Name">
+            <input required required class="form-control" id="name" name="lastname" placeholder="Enter Your Last Name">
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input class="form-control" id="email" type="email" name="email" placeholder="Enter Your Email">
+            <input required required class="form-control" id="email" type="email" name="email" placeholder="Enter Your Email">
         </div>
         <div class="form-group">
             <label for="Contact">Contact</label>
-            <input class="form-control" id="contact" name="contact" placeholder="Enter Your Contact Number">
+            <input required required class="form-control" id="contact" name="contact" placeholder="Enter Your Contact Number">
         </div>
         <div class="row">
             <div class="form-group col-sm-6">
@@ -47,49 +47,52 @@
         <div class="form-group row">
             <label for="city" id="city" class="col-sm-3 col-form-label">Current City</label>
             <div class="col-sm-9 ml-0">
-                <input type="text" name="city" class="form-control" id="city">
+                <input required required type="text" name="city" class="form-control" id="city">
             </div>
         </div>
             
         <div class="row">
             <div class="form-group col-sm-6">
                 <label for="Organisation" class="col-form-label">Organisation</label>
-                <input class="form-control" name="organisation" id="Organisation">
+                <input required required class="form-control" name="organisation" id="Organisation">
             </div>
             <div class="form-group col-sm-6">
                 <label for="Designation" class="col-form-label">Designation</label>
-                <input class="form-control" id="Designation" name="designation">
+                <input required required class="form-control" id="Designation" name="designation">
             </div>
         </div>
         <label for="higher" class="h6 mb-0">Competetive Exams</label>
         <div id="exams" class="row" >
             <div class="from-group col-sm-6 ">
                 <label for="exam" class="col-form-label pt-1">Exams Cleared</label>
-                <input class="form-control" name="exams">
+                <input required required class="form-control" name="exams">
             </div>
     
             <div class="from-group col-sm-6 ">
                 <label for="year" class="col-form-label pt-1">year</label>
-                <input class="form-control" name="examyear">
+                <input required required class="form-control" name="examyear">
             </div>
         </div>
         <label for="higher" class="h6 mb-0 mt-3">Higher Studies</label>
         <div id="higher" class="row" >
             <div class="from-group col-sm-4 ">
                 <label for="course" class="col-form-label pt-1">Course</label>
-                <input class="form-control" id="course" name="course">
+                <input required required class="form-control" id="course" name="highcourse">
             </div>
     
             <div class="from-group col-sm-4 ">
                 <label for="institution" class="col-form-label pt-1">Institution</label>
-                <input class="form-control" id="institution" name="institute">
+                <input required required class="form-control" id="institution" name="institute">
             </div>
     
             <div class="from-group col-sm-4">
                 <label for="year" class="col-form-label pt-1">Year</label>
-                <input class="form-control" id="year" name="year">
+                <input required required class="form-control" id="year" name="year">
             </div>
         </div>
+        </div>
+        <div class="form-group pt-2">
+            <input required required type="submit" class="form-control" style="background: steelblue; color: black;">
         </div>
     </form>
 </section>
