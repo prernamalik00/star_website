@@ -60,12 +60,12 @@ async function registerData(arr){
     const sheets = await google.sheets({version: 'v4', auth: auth});
 
     await sheets.spreadsheets.values.batchUpdate({
-            spreadsheetId: '1lIjJeKrZaM2fuv_hJIZfjbtiCBw5qjSxpfRx98Gya20',
+            spreadsheetId: '12q6VosuGSz3efO6_apCGu1immioQLrzdok8cLwVYNh8',
 
             requestBody: {
                 data: [
                     {
-                        range: `Sheet1!A${register}:O{register}`,
+                        range: `Sheet1!A${register}:O${register}`,
                         majorDimension: "COLUMNS",
                         values: arr
                     }
@@ -94,11 +94,13 @@ app.post('/', (req, res) => {
     writeData(UserData);
     res.render('index');
 });
-
+app.get('/register', (req,res)=>{
+    res.sendFile(path.join(__dirname, "/form.html"))
+})
 app.post('/register', (req,res)=>{
     console.log(req.body);
 
-    let UserData = [[req.body.firstname], [req.body.lastname], [req.body.email], [req.body.contact], [req.body.course], [req.body.branch], [req.body.city], [req.body.organisation], [req.body.designation], [req.body.exams], [req.body.examyear], [req.body.course], [req.body.institute], [req.body.year]];
+    let UserData = [[req.body.firstname], [req.body.lastname], [req.body.email], [req.body.contact], [req.body.course], [req.body.branch], [req.body.city], [req.body.organisation], [req.body.designation], [req.body.exams], [req.body.examyear], [req.body.highcourse], [req.body.institute], [req.body.year]];
     registerData(UserData);
     res.render('index');
 })
