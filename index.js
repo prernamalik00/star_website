@@ -1,4 +1,3 @@
-// import header from 'views/header.js';
 const express = require('express');
 const app = express();
 
@@ -85,7 +84,12 @@ app.get("/", function(req, res){
     res.render('index');
 });
 
+app.get("/register", function(req, res){
+    res.render('Alum-reg');
+});
+
 app.get("/contact", (req, res)=>{
+    // res.sendFile(path.join(__dirname, "/views/static/main.html"))
     res.render('contact')
 })
 
@@ -96,9 +100,9 @@ app.post('/', (req, res) => {
     writeData(UserData);
     res.render('index');
 });
-app.get('/register', (req,res)=>{
-    res.sendFile(path.join(__dirname, "/form.html"))
-})
+// app.get('/register', (req,res)=>{
+//     res.sendFile(path.join(__dirname, "/form.html"))
+// })
 app.post('/register', (req,res)=>{
     console.log(req.body);
 
