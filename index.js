@@ -89,7 +89,6 @@ app.get("/register", function(req, res){
 });
 
 app.get("/contact", (req, res)=>{
-    // res.sendFile(path.join(__dirname, "/views/static/main.html"))
     res.render('contact')
 })
 
@@ -115,6 +114,13 @@ app.get("/our-team", (req, res)=>{
     res.render('our-team');
 });
 
+app.get("/aboutus", (req, res)=>{
+    res.render('aboutus');
+});
+
+app.get('/atalk', (req,res)=>{
+    res.render('Atalk');
+})
 app.listen(3000, function(){
     console.log("Server running at port 3000");
 });
