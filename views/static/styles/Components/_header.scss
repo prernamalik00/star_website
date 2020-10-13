@@ -10,26 +10,25 @@
   }
 }
 .animate-pop-in {
-  animation: pop-in .6s ease-out forwards;
-  // animation-delay: 1s;
+  animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  
 }
 
 //page header
 
 .pagehead {
-  height: 250px;
+  min-height: 250px;
   width: 100%;
   background-image: url("bgimg/img1.jpg");
 }
 
-#page-title {
+.page-title {
   text-align: center;
   color: white;
-  padding-top: 5.6rem;
-  padding-bottom: 6.5rem;
+  padding-top: 18vh;
+  padding-bottom: 16vh;
   background: #00000070;
 }
-
 
 
 //        NAVBAR
@@ -55,7 +54,7 @@
     .nav-link, .navbar-brand {
       color: white;
     }
-    .nav-item:hover .nav-item:focus .sub-menu,
+    .nav-item:focus .sub-menu,
   .nav-item:focus-within .sub-menu,
   .nav-item:hover .sub-menu {
       visibility: visible; /* shows sub-menu */
@@ -64,6 +63,9 @@
       background-color: #000000b3;
       transform: translateY(0%);
       transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+    }
+    .nav-item:hover {
+      background-color: #000000b3;
     }
    
      .sub-menu {

@@ -10,20 +10,20 @@
 }
 
 .animate-pop-in {
-  animation: pop-in .6s ease-out forwards;
+  animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
 }
 
 .pagehead {
-  height: 250px;
+  min-height: 250px;
   width: 100%;
   background-image: url("bgimg/img1.jpg");
 }
 
-#page-title {
+.page-title {
   text-align: center;
   color: white;
-  padding-top: 5.6rem;
-  padding-bottom: 6.5rem;
+  padding-top: 18vh;
+  padding-bottom: 16vh;
   background: #00000070;
 }
 
@@ -50,7 +50,7 @@ nav .nav-link, nav .navbar-brand {
   color: white;
 }
 
-nav .nav-item:hover .nav-item:focus .sub-menu,
+nav .nav-item:focus .sub-menu,
 nav .nav-item:focus-within .sub-menu,
 nav .nav-item:hover .sub-menu {
   visibility: visible;
@@ -61,6 +61,10 @@ nav .nav-item:hover .sub-menu {
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
   /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+nav .nav-item:hover {
+  background-color: #000000b3;
 }
 
 nav .sub-menu {
@@ -215,6 +219,22 @@ nav .sub-menu a {
 
 .submit-btn:hover {
   background: #333333;
+}
+
+.aboutus {
+  background: #f5f5f5;
+}
+
+.slow-title {
+  animation-delay: 0.1s;
+}
+
+.heading-text {
+  animation-delay: 0.2s;
+}
+
+.content-text {
+  animation-delay: 0.4s;
 }
 
 /*# contact us form css*/
