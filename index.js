@@ -99,9 +99,9 @@ app.post('/', (req, res) => {
     writeData(UserData);
     res.render('index');
 });
-app.get('/register', (req,res)=>{
-    res.sendFile(path.join(__dirname, "/form.html"))
-})
+// app.get('/register', (req,res)=>{
+//     res.sendFile(path.join(__dirname, "/form.html"))
+// })
 app.post('/register', (req,res)=>{
     console.log(req.body);
 
@@ -118,6 +118,9 @@ app.get("/aboutus", (req, res)=>{
     res.render('aboutus');
 });
 
+app.get('/atalk', (req,res)=>{
+    res.render('Atalk');
+})
 app.listen(3000, function(){
     console.log("Server running at port 3000");
 });
