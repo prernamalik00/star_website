@@ -1,3 +1,8 @@
+.top-header {
+  background: #d1cdcd;
+  display: block;
+}
+
 @keyframes pop-in {
   0% {
     opacity: 0;
@@ -14,6 +19,7 @@
 }
 
 .pagehead {
+  font-family: "trebuchet MS";
   min-height: 250px;
   width: 100%;
   background-image: url("bgimg/img1.jpg");
@@ -37,7 +43,8 @@
   color: white;
 }
 
-.scroll .nav-link, .scroll .navbar-brand {
+.scroll .nav-link,
+.scroll .navbar-brand {
   color: white;
 }
 
@@ -46,7 +53,8 @@ nav {
   background-color: transparent;
 }
 
-nav .nav-link, nav .navbar-brand {
+nav .nav-link,
+nav .navbar-brand {
   color: white;
 }
 
@@ -54,13 +62,11 @@ nav .nav-item:focus .sub-menu,
 nav .nav-item:focus-within .sub-menu,
 nav .nav-item:hover .sub-menu {
   visibility: visible;
-  /* shows sub-menu */
   opacity: 1;
   z-index: 1;
   background-color: #000000b3;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
-  /* this removes the transition delay so the menu will be visible while the other styles transition */
 }
 
 nav .nav-item:hover {
@@ -69,7 +75,6 @@ nav .nav-item:hover {
 
 nav .sub-menu {
   visibility: hidden;
-  /* hides sub-menu */
   opacity: 0;
   position: absolute;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -78,7 +83,7 @@ nav .sub-menu {
   margin: 0;
   transform: translateY(-2em);
   z-index: -1;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 nav .sub-menu a {
@@ -86,6 +91,193 @@ nav .sub-menu a {
   display: block;
   padding: 0.5em 1em;
   text-decoration: none;
+}
+
+#mainCarousel .carousel-inner {
+  background-color: #00000070;
+}
+
+#mainCarousel .carousel-inner img {
+  height: 577px;
+  width: 100%;
+}
+
+#upcoming-events {
+  background: #f5f5f5;
+}
+
+#upcoming-events-carousel {
+  height: 300px;
+  width: 500px;
+  background: #f5f5f5;
+}
+
+#upcoming-events-carousel-inner img {
+  height: 300px;
+  width: 500px;
+}
+
+#upcoming-events .carousel-indicators-numbers li {
+  text-indent: 0;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 100%;
+  line-height: 30px;
+  color: #fff;
+  background-color: #999;
+  transition: all 0.25s ease;
+}
+
+#upcoming-events .carousel-indicators-numbers li.active, #upcoming-events .carousel-indicators-numbers li:hover {
+  width: 30px;
+  height: 30px;
+  background-color: #000000;
+}
+
+.get-involved-card {
+  padding: 40px;
+}
+
+.get-involved-card a {
+  color: #343a40;
+}
+
+.get-involved-card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+}
+
+.get-involved-card .card-inner .card-front,
+.get-involved-card .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.get-involved-card .card-inner .card-back {
+  opacity: 0;
+}
+
+.get-involved-card .separator {
+  min-height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  transition: transform 0.4s;
+}
+
+.get-involved-card .separator:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  background-color: #2f92bb;
+  color: white;
+}
+
+.get-involved-card .separator:hover .card-front {
+  opacity: 0;
+}
+
+.get-involved-card .separator:hover .card-back {
+  opacity: 1;
+}
+
+.whatwedo {
+  background: #f5f5f5;
+  padding: 40px;
+}
+
+.whatwedo .separator {
+  min-height: 270px;
+}
+
+.whatwedo .whatwedocard {
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  background-color: transparent;
+}
+
+.whatwedo .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.whatwedo .card-inner .card-front,
+.whatwedo .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.whatwedo .card-inner .card-back {
+  transform: rotateY(180deg);
+}
+
+.whatwedo .whatwedo-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.youtube {
+  background-image: url("images/ybg.jpg");
+  background-color: black;
+  padding: 40px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background: #000000;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+
+.box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(40%, transparent), to(rgba(255, 255, 255, 0.1)));
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
 }
 
 .team {
@@ -111,7 +303,7 @@ nav .sub-menu a {
 .team-member .name {
   margin-right: 10%;
   font-size: 22px;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
   line-height: 21px;
 }
 
@@ -120,13 +312,13 @@ nav .sub-menu a {
   margin-left: 10%;
   margin-right: 10%;
   font-size: 22px;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
   line-height: 21px;
 }
 
 .team-member::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 85%;
   border-radius: 5px;
   height: 220%;
@@ -168,7 +360,7 @@ nav .sub-menu a {
   font-size: 16px;
   margin: 7px;
   color: #fff;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   transform: translateY(100px);
 }
 
@@ -177,15 +369,15 @@ nav .sub-menu a {
 }
 
 .team ul li:nth-child(2) {
-  transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 
 .team ul li:nth-child(3) {
-  transition-delay: .3s;
+  transition-delay: 0.3s;
 }
 
 .team ul li:nth-child(4) {
-  transition-delay: .4s;
+  transition-delay: 0.4s;
 }
 
 .team .corner-member {
@@ -271,7 +463,8 @@ textarea {
   border: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   border-color: transparent !important;
 }
 
@@ -614,9 +807,47 @@ iframe {
   }
 }
 
+.img-class-carousel {
+  height: 400px;
+}
+
+.virtual-a-meet .vam-cards,
+.virtual-a-meet .vam-cards:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.virtual-a-meet .vam-cards .card-heading,
+.virtual-a-meet .vam-cards:hover .card-heading {
+  color: #810000;
+}
+
+.virtual-a-meet .vam-cards .btn,
+.virtual-a-meet .vam-cards:hover .btn {
+  color: white;
+}
+
+.virtual-a-meet .main-card {
+  background: #f5f5f5;
+}
+
 footer {
   background-image: url("images/UIET.jpg");
   background-color: #343a40;
+}
+
+footer a,
+footer a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  color: lightblue;
+}
+
+footer .headings {
+  color: white;
 }
 
 footer .footer-bottom {
@@ -639,7 +870,7 @@ footer .footer-bottom ul.social-network li {
 }
 
 footer .footer-bottom .social-network a.icoFacebook:hover {
-  background-color: #3B5998;
+  background-color: #3b5998;
 }
 
 footer .footer-bottom .social-network a.icoYoutube:hover {
@@ -656,7 +887,10 @@ footer .footer-bottom .social-network a.icoInstagram:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
-footer .footer-bottom .social-network a.icoRss:hover i, footer .footer-bottom .social-network a.icoFacebook:hover i, footer .footer-bottom .social-network a.icoVimeo:hover i, footer .footer-bottom .social-network a.icoLinkedin:hover i {
+footer .footer-bottom .social-network a.icoRss:hover i,
+footer .footer-bottom .social-network a.icoFacebook:hover i,
+footer .footer-bottom .social-network a.icoVimeo:hover i,
+footer .footer-bottom .social-network a.icoLinkedin:hover i {
   color: #282d33;
 }
 
@@ -677,7 +911,8 @@ footer .footer-bottom .social-circle li i {
   text-align: center;
 }
 
-footer .footer-bottom .social-circle li a:hover i, footer .footer-bottom .triggeredHover {
+footer .footer-bottom .social-circle li a:hover i,
+footer .footer-bottom .triggeredHover {
   -moz-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   -ms--transform: rotate(360deg);
@@ -748,6 +983,7 @@ footer .footer-bottom .social-circle a {
 body {
   overflow-x: hidden;
   min-height: 100vh;
+  font-family: "trebuchet MS";
 }
 
 .contentDiv {
@@ -772,13 +1008,13 @@ body {
 .headings {
   text-align: center;
   color: #343a40;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   display: inline-block;
   padding-bottom: 5px;
   position: relative;
 }
 
-.headings:before {
+.headings:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -786,190 +1022,5 @@ body {
   bottom: 0;
   left: 25%;
   border-bottom: 4px solid #810000;
-}
-
-#mainCarousel .carousel-inner {
-  background-color: #00000070;
-}
-
-#mainCarousel .carousel-inner img {
-  height: 577px;
-  width: 100%;
-}
-
-#upcoming-events {
-  background: #f5f5f5;
-}
-
-#upcoming-events-carousel {
-  height: 300px;
-  width: 500px;
-  background: #f5f5f5;
-}
-
-#upcoming-events-carousel-inner img {
-  height: 300px;
-  width: 500px;
-}
-
-#upcoming-events .carousel-indicators-numbers li {
-  text-indent: 0;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  border: none;
-  border-radius: 100%;
-  line-height: 30px;
-  color: #fff;
-  background-color: #999;
-  transition: all 0.25s ease;
-}
-
-#upcoming-events .carousel-indicators-numbers li.active, #upcoming-events .carousel-indicators-numbers li:hover {
-  width: 30px;
-  height: 30px;
-  background-color: #000000;
-}
-
-.get-involved-card {
-  padding: 40px;
-}
-
-.get-involved-card a {
-  color: #343a40;
-}
-
-.get-involved-card .card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.5s;
-}
-
-.get-involved-card .card-inner .card-front, .get-involved-card .card-inner .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.get-involved-card .card-inner .card-back {
-  opacity: 0;
-}
-
-.get-involved-card .separator {
-  min-height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: #f5f5f5;
-  transition: transform 0.4s;
-}
-
-.get-involved-card .separator:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s;
-  background-color: #2f92bb;
-  color: white;
-}
-
-.get-involved-card .separator:hover .card-front {
-  opacity: 0;
-}
-
-.get-involved-card .separator:hover .card-back {
-  opacity: 1;
-}
-
-.whatwedo {
-  background: #f5f5f5;
-  padding: 40px;
-}
-
-.whatwedo .separator {
-  min-height: 270px;
-}
-
-.whatwedo .whatwedocard {
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-  background-color: transparent;
-}
-
-.whatwedo .card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.whatwedo .card-inner .card-front, .whatwedo .card-inner .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  /* Safari */
-  backface-visibility: hidden;
-}
-
-.whatwedo .card-inner .card-back {
-  transform: rotateY(180deg);
-}
-
-.whatwedo .whatwedo-card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.youtube {
-  background-image: url("images/ybg.jpg");
-  background-color: black;
-  padding: 40px;
-}
-
-.gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
-  background: #000000;
-}
-
-.box {
-  position: relative;
-  width: 300px;
-  height: 150px;
-  transform-style: preserve-3d;
-  animation: animate 20s linear infinite;
-}
-
-.box span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-}
-
-.box span img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 160px;
-  object-fit: cover;
-  -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(40%, transparent), to(rgba(255, 255, 255, 0.1)));
-}
-
-@keyframes animate {
-  0% {
-    transform: perspective(1000px) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(1000px) rotateY(360deg);
-  }
 }
 /*# sourceMappingURL=main.css.map */
