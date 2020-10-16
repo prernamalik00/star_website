@@ -1,114 +1,115 @@
 //      OUR TEAM PAGE
 
 .team {
+  justify-content: center;
+  background: $bgColor;
+  .row {
     justify-content: center;
-    background: $bgColor;
-    .row {
-      justify-content: center;
-    }
-    &-member {
-      position: relative;
-      overflow: hidden;
-      
-      img {
-        border-radius: 5px;
-        background-size: cover;
-        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.589);
-      }
-  
-      .name {
-        // margin-left: 10%;
-        margin-right: 10%;
-        font-size: 22px;
-        letter-spacing: -.5px;
-        line-height: 21px;
-      }
-      .title {
-        margin-top: 8px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 22px;
-        letter-spacing: -.5px;
-        line-height: 21px;
-      }
-    }
-    &-member::before {
-      position: absolute;
-      content: '';
-      width: 85%;
+  }
+  &-member {
+    position: relative;
+    overflow: hidden;
+
+    img {
       border-radius: 5px;
-      height: 220%;
-      background: rgba(62, 186, 243, 0.7);
-      top: -50%;
-      left: -100%;
-      z-index: 1;
-      transform: rotate(20.5deg);
-      transform-origin: center top 0;
-      transition: 0.5s;
+      background-size: cover;
+      box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2),
+        4px 6px 20px 0 rgba(0, 0, 0, 0.589);
     }
-    &-member:hover::before {
-      left: 10%;
+
+    .name {
+      // margin-left: 10%;
+      margin-right: 10%;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      line-height: 21px;
     }
-    .card-text {
-      width: 100%;
-      padding: 0 20px;
-      position: absolute;
-      top: -100%;
-      color: #ffff;
-      left: 0;
-      z-index: 2;
-      transition: 1.1s;
+    .title {
+      margin-top: 8px;
+      margin-left: 10%;
+      margin-right: 10%;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      line-height: 21px;
     }
-    ul {
-      list-style: none;
-      position: absolute;
-      bottom: 0;
-      left: 10px;
-      z-index: 9;
-      padding-left: 2%;
-      li {
-        display: inline-block;
-        font-size: 16px;
-        margin: 7px;
-        color: #fff;
-        transition: all .2s ease-in-out;
-        transform: translateY(100px);
-        a {
-          color: white;
-        }
-        &:nth-child(2) {
-          transition-delay: .2s;
-        }
-        
-        &:nth-child(3) {
-          transition-delay: .3s;
-        }
-        
-        &:nth-child(4) {
-          transition-delay: .4s;
-        }
+  }
+  &-member::before {
+    position: absolute;
+    content: "";
+    width: 85%;
+    border-radius: 5px;
+    height: 220%;
+    background: rgba(62, 186, 243, 0.7);
+    top: -50%;
+    left: -100%;
+    z-index: 1;
+    transform: rotate(20.5deg);
+    transform-origin: center top 0;
+    transition: 0.5s;
+  }
+  &-member:hover::before {
+    left: 10%;
+  }
+  .card-text {
+    width: 100%;
+    padding: 0 20px;
+    position: absolute;
+    top: -100%;
+    color: #ffff;
+    left: 0;
+    z-index: 2;
+    transition: 1.1s;
+  }
+  ul {
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    z-index: 9;
+    padding-left: 2%;
+    li {
+      display: inline-block;
+      font-size: 16px;
+      margin: 7px;
+      color: #fff;
+      transition: all 0.2s ease-in-out;
+      transform: translateY(100px);
+      a {
+        color: white;
       }
-    }
-    .corner-member {
-      margin-top: 80px;
-    }
-    .corner-member-right {
-      margin-top: 50px;
-    }
-    &-member:hover::before {
-      left: 0;
-    }
-    
-    &-member:hover {
-      .team-member-picture {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.589);
+      &:nth-child(2) {
+        transition-delay: 0.2s;
       }
-      .card-text {
-        top: 80px;
+
+      &:nth-child(3) {
+        transition-delay: 0.3s;
       }
-      li {
-        transform: translateY(0);
+
+      &:nth-child(4) {
+        transition-delay: 0.4s;
       }
     }
   }
-  
+  .corner-member {
+    margin-top: 80px;
+  }
+  .corner-member-right {
+    margin-top: 50px;
+  }
+  &-member:hover::before {
+    left: 0;
+  }
+
+  &-member:hover {
+    .team-member-picture {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.589);
+    }
+    .card-text {
+      top: 80px;
+    }
+    li {
+      transform: translateY(0);
+    }
+  }
+}
