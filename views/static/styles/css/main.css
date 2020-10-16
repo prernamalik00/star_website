@@ -725,6 +725,10 @@ footer .footer-bottom .social-circle a {
   }
 }
 
+.img-class-carousel {
+  height: 400px;
+}
+
 body {
   overflow-x: hidden;
   min-height: 100vh;

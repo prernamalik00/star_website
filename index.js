@@ -119,7 +119,7 @@ app.get("/aboutus", (req, res)=>{
 });
 
 app.get('/atalk', (req,res)=>{
-    res.render('Atalk');
+    res.render('Atalk_series');
 })
 app.listen(3000, function(){
     console.log("Server running at port 3000");
