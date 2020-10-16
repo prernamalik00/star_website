@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../views/static/styles/Components/about-us.scss"
+    ],
+    "names": [],
+    "file": "about-us.css"
+}

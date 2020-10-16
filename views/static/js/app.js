@@ -1,7 +1,7 @@
-
-
-const nav = document.querySelector('nav');
-window.onscroll = function() {myFunction()};
+const nav = document.querySelector("nav");
+window.onscroll = function () {
+  myFunction();
+};
 
 function myFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
@@ -10,4 +10,3 @@ function myFunction() {
     nav.classList.remove("scroll", "shadow-sm");
   }
 }
-
