@@ -70,7 +70,7 @@ body {
 .headings {
   text-align: center;
   color: #343a40;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   display: inline-block;
   padding-bottom: 5px;
   position: relative;
@@ -91,7 +91,8 @@ body {
   color: white;
 }
 
-.scroll .nav-link, .scroll .navbar-brand {
+.scroll .nav-link,
+.scroll .navbar-brand {
   color: white;
 }
 
@@ -100,7 +101,8 @@ nav {
   background-color: transparent;
 }
 
-nav .nav-link, nav .navbar-brand {
+nav .nav-link,
+nav .navbar-brand {
   color: white;
 }
 
@@ -158,7 +160,8 @@ nav .nav-link, nav .navbar-brand {
   transition: transform 0.5s;
 }
 
-.get-involved-card .card-inner .card-front, .get-involved-card .card-inner .card-back {
+.get-involved-card .card-inner .card-front,
+.get-involved-card .card-inner .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -180,7 +183,7 @@ nav .nav-link, nav .navbar-brand {
 .get-involved-card .separator:hover {
   transform: scale(1.05);
   transition: transform 0.2s;
-  background-color: #2A89D0;
+  background-color: #2a89d0;
   color: white;
 }
 
@@ -216,7 +219,8 @@ nav .nav-link, nav .navbar-brand {
   transform-style: preserve-3d;
 }
 
-.whatwedo .card-inner .card-front, .whatwedo .card-inner .card-back {
+.whatwedo .card-inner .card-front,
+.whatwedo .card-inner .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -309,7 +313,7 @@ footer .footer-bottom ul.social-network li {
 }
 
 footer .footer-bottom .social-network a.icoFacebook:hover {
-  background-color: #3B5998;
+  background-color: #3b5998;
 }
 
 footer .footer-bottom .social-network a.icoYoutube:hover {
@@ -326,7 +330,10 @@ footer .footer-bottom .social-network a.icoInstagram:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
-footer .footer-bottom .social-network a.icoRss:hover i, footer .footer-bottom .social-network a.icoFacebook:hover i, footer .footer-bottom .social-network a.icoVimeo:hover i, footer .footer-bottom .social-network a.icoLinkedin:hover i {
+footer .footer-bottom .social-network a.icoRss:hover i,
+footer .footer-bottom .social-network a.icoFacebook:hover i,
+footer .footer-bottom .social-network a.icoVimeo:hover i,
+footer .footer-bottom .social-network a.icoLinkedin:hover i {
   color: #282d33;
 }
 
@@ -347,7 +354,8 @@ footer .footer-bottom .social-circle li i {
   text-align: center;
 }
 
-footer .footer-bottom .social-circle li a:hover i, footer .footer-bottom .triggeredHover {
+footer .footer-bottom .social-circle li a:hover i,
+footer .footer-bottom .triggeredHover {
   -moz-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   -ms--transform: rotate(360deg);
@@ -449,7 +457,8 @@ textarea {
   border: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   border-color: transparent !important;
 }
 
