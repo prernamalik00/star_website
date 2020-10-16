@@ -1,4 +1,4 @@
-<%- include("partials/header"); -%>
+<%- include("partials/headerp"); -%>
 
 
 
@@ -19,7 +19,7 @@
           <div class="carousel-item active">
             <img src="images/temp1.jpeg" class="img-fluid">
             <div class="carousel-caption">
-              
+              <h3 class="my-4">STUDENT TEAM FOR ALUMNI RELATIONS</h3> 
               <p>Welcome to the official website of STAR UIET , Panjab University, Chandigarh. Know more.</p>
               
             </div>
@@ -65,16 +65,10 @@
 
 
       </div>
-      
-    </div>
-    <div>
-  
-  </div>
-    
-
+ 
 <!--            UPCOMING EVENTS CAROUSEL           -->
 
-    <section class="py-3">
+    <section id="upcoming-events" class="py-3">
 <div class="text-center pt-3">
   <h2 class="headings py-3">UPCOMING EVENTS</h2>
 </div>
@@ -82,18 +76,18 @@
       <section class="row px-5 py-4" style="overflow-x: hidden; ">
         <div class="col-md-5 order-md-1 my-auto ;" style="padding-left: 15vh " >
 
-      <div id="upcoming-events" class="carousel slide carousel-fade " data-interval="2000" data-ride="carousel" data-pause="false" data-ride="true">
+      <div id="upcoming-events-carousel" class="carousel slide carousel-fade " data-interval="2000" data-ride="carousel" data-pause="false" data-ride="true">
 
         <ol class="carousel-indicators carousel-indicators-numbers" >
-          <li data-target="#upcoming-events" data-slide-to="0" class="active">1</li>
-          <li data-target="#upcoming-events" data-slide-to="1">2</li>
-          <li data-target="#upcoming-events" data-slide-to="2">3</li>
-          <li data-target="#upcoming-events" data-slide-to="3">4</li>
-          <li data-target="#upcoming-events" data-slide-to="4">5</li>
+          <li data-target="#upcoming-events-carousel" data-slide-to="0" class="active">1</li>
+          <li data-target="#upcoming-events-carousel" data-slide-to="1">2</li>
+          <li data-target="#upcoming-events-carousel" data-slide-to="2">3</li>
+          <li data-target="#upcoming-events-carousel" data-slide-to="3">4</li>
+          <li data-target="#upcoming-events-carousel" data-slide-to="4">5</li>
         </ol>
       
       
-        <div class="carousel-inner" id="upcoming-carousel-inner">
+        <div class="carousel-inner" id="upcoming-events-carousel-inner">
           <div class="carousel-item active">
             <img src="images/temp1.jpeg" class="img-fluid">
             
@@ -160,18 +154,18 @@
     <h2 class="headings py-3">GET INVOLVED</h2>
   </div>
   
-  <div class="get-involved-cards mx-5 my-5">
+  <div class="get-involved-cards mx-10 my-3">
     <div class="row">
       <div class="get-involved-card col-md-3">
         <a href="" style="text-decoration: none;">
           <div class="separator justify-content">
             <div class="card-inner">
               <div class="card-front">
-                <i class="fas fa-users my-4 fa-4x"></i>
+                <i class="fas fa-users my-4 fa-3x"></i>
                 <h6 mx-auto>STUDENT MENTORSHIP PROGRAM</h6>
               </div>
-              <div class="card-back my-5">
-                <p>Dil dooba dil dooba neeli aankho mei ye dil dooba.</p>
+              <div class="card-back my-3">
+                <p> This initiative allows the alumni to act as mentor for the students, by helping them guide their career path</p>
               </div>
             </div>
             
@@ -184,11 +178,11 @@
           <div class="separator">
             <div class="card-inner">
               <div class="card-front">
-                <i class="fas fa-trophy my-4 fa-4x"></i>
+                <i class="fas fa-trophy my-4 fa-3x"></i>
                 <h6 mx-auto>SHARE YOUR ACHIEVEMENTS</h6>
               </div>
-              <div class="card-back my-5">
-                <p>Mehbooba Mehbooba Bass ye jaan le mehbooba.</p>
+              <div class="card-back my-4">
+                <p>Showcase your achievements through our platform to inspire the students</p>
               </div>
             </div>
             
@@ -201,11 +195,11 @@
           <div class="separator">
             <div class="card-inner">
               <div class="card-front">
-                <i class="fas fa-road my-4 fa-4x"></i>
-                <h6 mx-auto>CAREER OPPORTUNITIES</h6>
+                <i class="fas fa-road my-4 fa-3x"></i>
+                <h6 mx-auto>CAREER <br> OPPORTUNITIES</h6>
               </div>
-              <div class="card-back my-5">
-                <p>Ashique hu. Deewana hu. Tere liye Kuch bhi kar jaunga.</p>
+              <div class="card-back mt-4">
+                <p>Build connections through alumni and get a chance to boost your career profile</p>
               </div>
             </div>
             
@@ -219,10 +213,11 @@
             <div class="card-inner">
               <div class="card-front">
                 <img class="my-4" src="/images/join-us-gif.gif" width="100%" alt="">
-                <!-- <h6 mx-auto>VOLUNTEER</h6> -->
+                
               </div>
-              <div class="card-back my-5">
-                <p>Ishq mei tere jeeta hu, Tere liye hi mar jaunga..Ten ten ten ten tenen nenen nen... ne nenene nenenen ne</p>
+              <div class="card-back my-3">
+                <!-- <h6 mx-auto>VOLUNTEER</h6> -->
+                <p>Work with us to establish a strong student-alumni bond through various initiatives</p>
               </div>
             </div>
             
@@ -240,87 +235,91 @@
 
 <!--         WHAT WE DO            -->
 
-    <section class="whatwedo">
-      <div class="container">
-        <div class="text-center pb-5">
-          <h2 class="headings py-3">WHAT WE DO</h2>
-        </div>
-        
+<section class="whatwedo">
+  <div class="container">
+    <div class="text-center pb-5">
+      <h2 class="headings py-3">About STAR</h2>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <p>STAR (Students Team for Alumni Relations) has been carrying forward its legacy by organizing events and activities yearly, and by starting up new digitalized initiatives.
+           It continuously ventures to strengthen the relations of Alumni of UIET and their alma mater. It has been hosting a wide range of events like A-Talk, Virtual Alumni Meet, Rewired, and many other informative events through the distinguished alumni of our college. It looks forward to further build and advance the aim of this committee, i.e.,
+           to foster the bond between the Alumni, Institute, and its students.</p>
+      </div>
+      <div  class="col-md-12 whatwedo-cards">
+        <h5 class="text-center py-3">WHAT WE DO</h5>
         <div class="row">
-          
-          <div  class="col-md-12 whatwedo-cards">
-            
-            <div class="row">
-              <div class="whatwedo-card col-md-4 text-center">
-                <div class="separator">
+          <div class="whatwedo-card col-md-4 text-center">
+            <div class="separator">
 
-                  <div class="card-inner">
-                    <div class="card-front">
-                      <i class="fas fa-university my-4 fa-5x"></i>
-                      <h5>FOR THE INSTITUTION</h5>
-                    </div>
-                    <div class="card-back">
-                      <p class="my-5">To promote and foster mutually beneficial interaction between the Alumni and the present students of UIET and between Alumni themselves.</p>
-                    </div>
-                  </div>
-                           
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="fas fa-university my-4 fa-5x"></i>
+                  <h5>FOR THE INSTITUTION</h5>
+                </div>
+                <div class="card-back">
+                  <p class="my-5">An institution is known by its alumni. We work towards building up this bond between the eminent alumni with UIET through a mutually beneficial relationship.</p>
                 </div>
               </div>
-
-              <div class="whatwedo-card col-md-4 text-center">
-                <div class="separator">
-
-                  <div class="card-inner">
-                    <div class="card-front">
-                      <i class="fas fa-user-graduate fa-5x my-4"></i>
-                      <h5>FOR THE STUDENTS</h5>
-                    </div>
-                    <div class="card-back">
-                      <p class="my-5">To promote and foster mutually beneficial interaction between the Alumni and the present students of UIET and between Alumni themselves.</p>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="whatwedo-card col-md-4 text-center">
-                <div class="separator">
-
-                  <div class="card-inner">
-                    <div class="card-front">
-                      <i class="far fa-handshake my-4 fa-5x"></i>
-                      <h5>FOR THE ALUMNI</h5>
-                    </div>
-                    <div class="card-back">
-                      <p class="my-5">To promote and foster mutually beneficial interaction between the Alumni and the present students of UIET and between Alumni themselves.</p>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              
-              
+                       
             </div>
           </div>
+
+          <div class="whatwedo-card col-md-4 text-center">
+            <div class="separator">
+
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="fas fa-user-graduate fa-5x my-4"></i>
+                  <h5>FOR THE STUDENTS</h5>
+                </div>
+                <div class="card-back">
+                  <p class="my-5">STAR has been striving to help the students of UIET through multiple initiatives, many involving guidance provided by our esteemed alumni.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="whatwedo-card col-md-4 text-center">
+            <div class="separator">
+
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="far fa-handshake my-4 fa-5x"></i>
+                  <h5>FOR THE ALUMNI</h5>
+                </div>
+                <div class="card-back">
+                  <p class="my-5">We connect the Alumni to their Alma Mater and the present students of UIET. Through us, they get a chance to impart their knowledge to ones who now stand in the shoes, where they did before.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
 <!--          Director's Message       -->
 
-    <section class="Director my-3">
+    <section class="Director">
 
-      <div class="text-center">
+      <div class="text-center pt-3">
         <h3 class="headings py-3">Director's Message</h3>
       </div>
       <div class="row px-5 py-4">
         <div class="col-md-7 order-md-2 my-auto">
           <p class="lead"> " I am happy to take this opportunity to introduce you to the University Institute of Engineering and Technology (UIET), an in-campus Engineering Institute situated in the heart of Panjab University, Chandigarh. Since its establishment, UIET has come a long way and is geared towards a rapid growth. This is possible because of highly competitive students which are selected through an all India entrance test, research oriented faculty and an infrastructure that is most suited towards learning. Apart from focusing on academics, the institute also lays emphasis on soft skills of students to prepare them for the professional world.
-<br>
+
             Networking with leading organizations and institutes has benefitted the institute hugely in orienting students to R&D activities as per the requirements of industry. Corporate sector has been very forthcoming in assessing UIET students. As a result majority of our students are placed through campus placements.
-             I strongly feel that the industry can benefit from the tremendous potential that UIET has and can further collaborate in creating an industry-academic interface. | extend an invitation to the corporate sector to participate in the Campus Recruitment Program of UIET." - Director
+             I strongly feel that the industry can benefit from the tremendous potential that UIET has and can further collaborate in creating an industry-academic interface. I extend an invitation to the corporate sector to participate in the Campus Recruitment Program  of UIET." - Director
           </p></div>
-        <div class="col-md-5 order-md-1">
+        <div class="col-md-5 order-md-1 pt-2">
           <img src="images/savita.jpeg" >  </div>
       </div>
     </section>
@@ -329,11 +328,12 @@
     <div class="text-center">
       <h3 class="headings py-3" style = " color :white;  "> JOIN US - STAR FAMILY</h3>
       <br>
-      <p style="color: white; padding-top: 3vh;"> We are the Student Team for Alumni Relations (STAR) UIET, Panjab University Chandigarh. Join our family here , know more about Our Team . </p>
+      <p style="color: white; padding-top: 3vh;">Join our team to become your best professional-self and get closer to the numerous career opportunities by building relations with our global alumni. </p>
       <br>
     </div>
   </section>
    
+  <!--             GALLERY -->
    
     <section class="gallery ">
      
@@ -366,7 +366,6 @@
             <div  class="col-md-6 order-md-1 my-auto" >
            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZHsCVaPsuWk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-
             <div  class="col-md-6 order-md-2 my-auto" >
               <iframe width="560" height="315" src="https://www.youtube.com/embed/rj_rGR1VCLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
            

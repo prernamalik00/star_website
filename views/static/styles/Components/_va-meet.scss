@@ -1,0 +1,16 @@
+.virtual-a-meet {
+  .vam-cards,
+  .vam-cards:hover {
+    text-decoration: none;
+    color: inherit;
+    .card-heading {
+      color: $primaryColor;
+    }
+    .btn {
+      color: white;
+    }
+  }
+  .main-card {
+    background: $bgColor;
+  }
+}
