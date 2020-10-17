@@ -1,5 +1,12 @@
 .mentorship {
   .content-text {
-    font-size: large;
+    font-size: medium;
+  }
+  .list-points {
+    i {
+      color: $primaryColor;
+    }
+    display: flex;
+    font-weight: 400;
   }
 }
