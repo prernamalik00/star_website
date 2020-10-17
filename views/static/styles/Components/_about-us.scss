@@ -14,3 +14,20 @@
 .content-text {
   animation-delay: 0.4s;
 }
+
+.ending-text {
+  text-align: center;
+  display: inline-block;
+  padding-top: 5px;
+  position: relative;
+}
+
+.ending-text::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 1px;
+  top: 0;
+  left: 45%;
+  border-top: 6px dotted $primaryColor;
+}
