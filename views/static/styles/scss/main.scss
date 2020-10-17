@@ -5,6 +5,7 @@ $bgColorPrimary: #2f92bb;
 $darkColor: #343a40;
 $darkColor2: #282d33;
 
+@import "../fonts/TrebuchetMS";
 @import "../Components/header";
 @import "../Components/home";
 @import "../Components/our-team";
@@ -13,17 +14,20 @@ $darkColor2: #282d33;
 @import "../Components/contact-us";
 @import "../Components/atalk";
 @import "../Components/va-meet";
+@import "../Components/mentorship";
 @import "../Components/footer";
 
 body {
   overflow-x: hidden;
   min-height: 100vh;
-
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .contentDiv {
   position: fixed;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap");
 
 //    SPACING CLASSES
 
