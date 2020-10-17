@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap");
+@font-face {
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-size: large;
+  font-weight: normal;
+  src: local("Trebuchet MS"), url("../../assets/fonts/Trebuchet-MS/trebuc.woff") format("woff");
+}
+
 .top-header {
   background: #d1cdcd;
   display: block;
@@ -429,6 +438,23 @@ nav .sub-menu a {
   animation-delay: 0.4s;
 }
 
+.ending-text {
+  text-align: center;
+  display: inline-block;
+  padding-top: 5px;
+  position: relative;
+}
+
+.ending-text::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 1px;
+  top: 0;
+  left: 45%;
+  border-top: 6px dotted #810000;
+}
+
 /*# contact us form css*/
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
@@ -831,6 +857,19 @@ iframe {
   background: #f5f5f5;
 }
 
+.mentorship .content-text {
+  font-size: medium;
+}
+
+.mentorship .list-points {
+  display: flex;
+  font-weight: 400;
+}
+
+.mentorship .list-points i {
+  color: #810000;
+}
+
 footer {
   background-image: url("images/UIET.jpg");
   background-color: #343a40;
@@ -987,7 +1026,7 @@ footer .footer-bottom .social-circle a {
 body {
   overflow-x: hidden;
   min-height: 100vh;
-  font-family: "trebuchet MS";
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .contentDiv {
