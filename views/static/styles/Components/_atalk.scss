@@ -42,7 +42,6 @@
           left: 0;
         }
       }
-      
     }
 
     .watch-btn {
@@ -54,8 +53,14 @@
     .btn-collapse {
       position: absolute;
       float: right;
+
+      border-radius: 100%;
+    }
+    .btn-down {
       bottom: -3%;
-        border-radius: 100%;
+    }
+    .btn-up {
+      bottom: -2%;
     }
   }
 }

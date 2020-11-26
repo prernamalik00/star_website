@@ -220,7 +220,7 @@ nav .sub-menu a {
 
 #upcoming-events-carousel-inner img {
   height: 300px;
-  width: 500px;
+  width: 400px;
 }
 
 #upcoming-events .carousel-indicators-numbers li {
@@ -994,8 +994,15 @@ iframe {
 .a-meet .season-section .btn-collapse {
   position: absolute;
   float: right;
-  bottom: -3%;
   border-radius: 100%;
+}
+
+.a-meet .season-section .btn-down {
+  bottom: -3%;
+}
+
+.a-meet .season-section .btn-up {
+  bottom: -2%;
 }
 
 .virtual-a-meet .vam-cards,
