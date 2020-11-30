@@ -92,7 +92,7 @@ nav .sub-menu {
   margin: 0;
   transform: translateY(-2em);
   z-index: -1;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 nav .sub-menu a {
@@ -1051,7 +1051,6 @@ body {
 .headings {
   text-align: center;
   color: #343a40;
-  font-family: "Cinzel", serif;
   display: inline-block;
   padding-bottom: 5px;
   position: relative;
