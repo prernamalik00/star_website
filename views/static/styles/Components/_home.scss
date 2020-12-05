@@ -22,7 +22,7 @@
     &-inner {
       img {
         height: 300px;
-        width: 500px;
+        width: 400px;
       }
     }
   }
@@ -46,6 +46,12 @@
         background-color: #000000;
       }
     }
+  }
+}
+
+.headlines {
+  a:hover {
+    color: grey;
   }
 }
 

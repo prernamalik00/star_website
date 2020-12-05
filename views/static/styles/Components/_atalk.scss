@@ -1,9 +1,77 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .img-class-carousel{
     height: 400px;
 }   
 =======
 .img-class-carousel {
   height: 400px;
+=======
+.a-meet {
+  background: $bgColor;
+  .card-title {
+    color: $primaryColor;
+  }
+
+  .season-section {
+    background: white;
+    position: relative;
+    .season-no {
+      font-size: 24;
+      color: $primaryColor;
+    }
+    .card {
+      .card-img {
+        position: relative;
+        height: 286px;
+        overflow: hidden;
+      }
+      &-front {
+        display: block;
+        width: 100%;
+        height: 286px;
+      }
+
+      &-back {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        overflow: hidden;
+        width: 100%;
+        height: 286px;
+        transition: 1s ease;
+      }
+      &-text {
+        font-family: Nunito Sans Light;
+        font-size: 16px;
+      }
+      .card-img:hover {
+        .card-back {
+          transition: 0.5s ease;
+          left: 0;
+        }
+      }
+    }
+
+    .watch-btn {
+      background: $primaryColor;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .btn-collapse {
+      position: absolute;
+      float: right;
+
+      border-radius: 100%;
+    }
+    .btn-down {
+      bottom: -3%;
+    }
+    .btn-up {
+      bottom: -2%;
+    }
+  }
+>>>>>>> d861bae5fb2f4f3010cd52f65377a01e45350269
 }
 >>>>>>> a3e6bee1f38bebe9645cfc3ad9a4abfd0841f05e
