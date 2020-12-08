@@ -82,6 +82,14 @@ app.get("/contact", (req, res) => {
     res.render("contact");
 });
 
+app.get('/join-us', (req, res) => {
+    res.render('join-us.ejs')
+})
+
+app.get('/smp', (req, res) => {
+    res.render('smp.ejs')
+})
+
 app.post("/", (req, res) => {
     console.log(req.body);
 
@@ -94,9 +102,6 @@ app.post("/", (req, res) => {
     writeData(UserData);
     res.render("index");
 });
-// app.get('/register', (req,res)=>{
-//     res.sendFile(path.join(__dirname, "/form.html"))
-// })
 app.post("/register", (req, res) => {
     console.log(req.body);
 
