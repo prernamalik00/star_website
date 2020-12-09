@@ -3,13 +3,30 @@ window.onscroll = function () {
   myFunction();
 };
 
+// CHANGING NAVBAR COLOUR ON SCROLL
+
 function myFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+  if (window.pageYOffset > 10) {
     nav.classList.add("scroll", "shadow-sm");
   } else {
     nav.classList.remove("scroll", "shadow-sm");
   }
 }
+
+// STOPPING PHOTO GALLERY ON HOVER
+var pictures = document.getElementsByClassName("gallery-pic");
+for (var i = 0; i < pictures.length; i++) {
+  pictures[i].addEventListener("mouseover", function () {
+    document.getElementsByClassName("box")[0].style.webkitAnimationPlayState =
+      "paused";
+  });
+  pictures[i].addEventListener("mouseout", function () {
+    document.getElementsByClassName("box")[0].style.webkitAnimationPlayState =
+      "running";
+  });
+}
+
+// EXPANDING & COLLAPSING OF ALUMNI TALKS SEASON SECTION
 
 function showMore(id, collapse_element) {
   document.getElementById(id).classList.remove("d-block");

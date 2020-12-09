@@ -45,7 +45,7 @@ a:hover {
 }
 
 a:hover {
-  color: lightblue;
+  color: grey;
 }
 
 .pagehead-font {
@@ -124,9 +124,8 @@ a:hover {
 
 .pagehead {
   font-family: "trebuchet MS";
-  min-height: 250px;
+  min-height: 270px;
   width: 100%;
-  background-image: url("bgimg/img1.jpg");
 }
 
 .page-title {
@@ -136,7 +135,6 @@ a:hover {
   font-weight: bolder;
   padding-top: 18vh;
   padding-bottom: 16vh;
-  background: #00000070;
 }
 
 #navu {
@@ -357,10 +355,10 @@ nav .sub-menu a {
   width: 300px;
   height: 150px;
   transform-style: preserve-3d;
-  animation: animate 20s linear infinite;
+  animation: animate 30s linear infinite;
 }
 
-.box span {
+.box .gallery-pics {
   position: absolute;
   top: 0;
   left: 0;
@@ -371,7 +369,7 @@ nav .sub-menu a {
   transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
 }
 
-.box span img {
+.box .gallery-pics img {
   position: absolute;
   top: 0;
   left: 0;
@@ -413,20 +411,20 @@ nav .sub-menu a {
 .team-member .name {
   margin-right: 10%;
   font-size: 22px;
-  letter-spacing: -0.5px;
   line-height: 21px;
 }
 
 .team-member .title {
   margin-top: 8px;
-  margin-left: 10%;
   margin-right: 10%;
-  font-size: 22px;
-  letter-spacing: -0.5px;
   line-height: 21px;
 }
 
-.team-member::before {
+.team-member .name:hover, .team-member .title:hover {
+  color: inherit;
+}
+
+.team-member-student::before {
   position: absolute;
   content: "";
   width: 85%;
@@ -441,7 +439,7 @@ nav .sub-menu a {
   transition: 0.5s;
 }
 
-.team-member:hover::before {
+.team-member-student:hover::before {
   left: 10%;
 }
 
@@ -502,15 +500,15 @@ nav .sub-menu a {
   left: 0;
 }
 
-.team-member:hover .team-member-picture {
+.team-member-picture:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.589);
 }
 
-.team-member:hover .card-text {
+.team-member-student:hover .card-text {
   top: 80px;
 }
 
-.team-member:hover li {
+.team-member-student:hover li {
   transform: translateY(0);
 }
 
