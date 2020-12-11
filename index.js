@@ -103,7 +103,6 @@ app.post("/", (req, res) => {
     res.render("index");
 });
 app.post("/register", (req, res) => {
-    console.log(req.body);
 
     let UserData = [
         [req.body.firstname],
