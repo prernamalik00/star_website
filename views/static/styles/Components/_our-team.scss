@@ -21,19 +21,25 @@
       // margin-left: 10%;
       margin-right: 10%;
       font-size: 22px;
-      letter-spacing: -0.5px;
+      // letter-spacing: -0.5px;
       line-height: 21px;
     }
     .title {
       margin-top: 8px;
-      margin-left: 10%;
+      // margin-left: 10%;
       margin-right: 10%;
-      font-size: 22px;
-      letter-spacing: -0.5px;
+      // font-size: 22px;
+      // letter-spacing: -0.5px;
       line-height: 21px;
     }
+    .name:hover, .title:hover {
+      color: inherit;
+    }
   }
-  &-member::before {
+  // .faculty-member:hover {
+
+  // }
+  &-member-student::before {
     position: absolute;
     content: "";
     width: 85%;
@@ -47,7 +53,7 @@
     transform-origin: center top 0;
     transition: 0.5s;
   }
-  &-member:hover::before {
+  &-member-student:hover::before {
     left: 10%;
   }
   .card-text {
@@ -96,15 +102,18 @@
   .corner-member-right {
     margin-top: 50px;
   }
+  
   &-member:hover::before {
     left: 0;
   }
 
-  &-member:hover {
-    .team-member-picture {
+  &-member-picture:hover {
+    // .team-member-picture {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.589);
-    }
+    // }
+  }
+  &-member-student:hover {
     .card-text {
       top: 80px;
     }

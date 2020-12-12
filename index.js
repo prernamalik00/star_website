@@ -59,7 +59,7 @@ async function registerData(arr) {
 
         requestBody: {
             data: [{
-                range: `Sheet1!A${register}:P${register}`,
+                range: `Sheet1!A${register}:O${register}`,
                 majorDimension: "COLUMNS",
                 values: arr,
             }, ],
@@ -82,14 +82,6 @@ app.get("/contact", (req, res) => {
     res.render("contact");
 });
 
-app.get('/join-us', (req, res) => {
-    res.render('join-us.ejs')
-})
-
-app.get('/smp', (req, res) => {
-    res.render('smp.ejs')
-})
-
 app.post("/", (req, res) => {
     console.log(req.body);
 
@@ -102,6 +94,9 @@ app.post("/", (req, res) => {
     writeData(UserData);
     res.render("index");
 });
+// app.get('/register', (req,res)=>{
+//     res.sendFile(path.join(__dirname, "/form.html"))
+// })
 app.post("/register", (req, res) => {
 
     let UserData = [
@@ -134,7 +129,7 @@ app.get("/aboutus", (req, res) => {
 });
 
 app.get("/atalk", (req, res) => {
-    res.render("Atalk_series");
+    res.render("Atalk");
 });
 app.get("/va-meet", (req, res) => {
     res.render("va-meet");

@@ -45,7 +45,7 @@ a:hover {
 }
 
 a:hover {
-  color: lightblue;
+  color: grey;
 }
 
 .pagehead-font {
@@ -124,9 +124,9 @@ a:hover {
 
 .pagehead {
   font-family: "trebuchet MS";
-  min-height: 250px;
+  min-height: 270px;
   width: 100%;
-  background-image: url("bgimg/img1.jpg");
+  background-size: contain;
 }
 
 .page-title {
@@ -136,7 +136,6 @@ a:hover {
   font-weight: bolder;
   padding-top: 18vh;
   padding-bottom: 16vh;
-  background: #00000070;
 }
 
 #navu {
@@ -189,8 +188,7 @@ nav .sub-menu {
   margin: 0;
   transform: translateY(-2em);
   z-index: -1;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
- z-index 0s linear 0.01s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 nav .sub-menu a {
@@ -358,14 +356,21 @@ nav .sub-menu a {
   width: 300px;
   height: 150px;
   transform-style: preserve-3d;
-  animation: animate 10s linear;
+  animation: animate 30s linear infinite;
 }
 
-.box {}
+.box .gallery-pics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
 
-
-
-.box span img {
+.box .gallery-pics img {
   position: absolute;
   top: 0;
   left: 0;
@@ -407,20 +412,20 @@ nav .sub-menu a {
 .team-member .name {
   margin-right: 10%;
   font-size: 22px;
-  letter-spacing: -0.5px;
   line-height: 21px;
 }
 
 .team-member .title {
   margin-top: 8px;
-  margin-left: 10%;
   margin-right: 10%;
-  font-size: 22px;
-  letter-spacing: -0.5px;
   line-height: 21px;
 }
 
-.team-member::before {
+.team-member .name:hover, .team-member .title:hover {
+  color: inherit;
+}
+
+.team-member-student::before {
   position: absolute;
   content: "";
   width: 85%;
@@ -435,7 +440,7 @@ nav .sub-menu a {
   transition: 0.5s;
 }
 
-.team-member:hover::before {
+.team-member-student:hover::before {
   left: 10%;
 }
 
@@ -496,15 +501,15 @@ nav .sub-menu a {
   left: 0;
 }
 
-.team-member:hover .team-member-picture {
+.team-member-picture:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.589);
 }
 
-.team-member:hover .card-text {
+.team-member-student:hover .card-text {
   top: 80px;
 }
 
-.team-member:hover li {
+.team-member-student:hover li {
   transform: translateY(0);
 }
 
@@ -1180,65 +1185,4 @@ footer .footer-bottom .social-circle a {
     text-align: center;
   }
 }
-<<<<<<< HEAD
-
-.img-class-carousel {
-  height: 400px;
-}
-
-.box span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px)
-}
-
-body {
-  overflow-x: hidden;
-  min-height: 100vh;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-.contentDiv {
-  position: fixed;
-}
-
-.separator {
-  padding: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.mx-10 {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
-.my-7 {
-  margin-top: 7rem;
-  margin-bottom: 7rem;
-}
-
-.headings {
-  text-align: center;
-  color: #343a40;
-  display: inline-block;
-  padding-bottom: 5px;
-  position: relative;
-}
-
-.headings:after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 1px;
-  bottom: 0;
-  left: 25%;
-  border-bottom: 4px solid #810000;
-}
-=======
->>>>>>> d861bae5fb2f4f3010cd52f65377a01e45350269
 /*# sourceMappingURL=main.css.map */

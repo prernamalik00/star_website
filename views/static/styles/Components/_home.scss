@@ -168,9 +168,10 @@
   width: 300px;
   height: 150px;
   transform-style: preserve-3d;
-  animation: animate 20s linear infinite;
+  animation: animate 30s linear infinite;
+  // animation-play-state: running;
 
-  span {
+  .gallery-pics {
     position: absolute;
     top: 0;
     left: 0;
@@ -190,6 +191,7 @@
       -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right
             bottom, from(transparent), color-stop(40%, transparent), to(rgba(255, 255, 255, 0.1)));
     }
+    
   }
 }
 

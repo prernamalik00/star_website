@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,YAAY;EACzB,GAAG,EAAE,6CAA8C;;;AAErD,UAAU;EACR,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,6CAA8C",
-    "sources": [
-        "../fonts/nexa.scss"
-    ],
-    "names": [],
-    "file": "nexa.css"
-}
