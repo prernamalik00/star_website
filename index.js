@@ -6,9 +6,6 @@ const e = require("express");
 const { strict } = require("assert");
 const path = require("path");
 const { google } = require("googleapis");
-// var ghpages = require('gh-pages');
-
-// ghpages.publish('dist', function(err) {});
 
 app.set("view engine", "ejs");
 
@@ -87,7 +84,7 @@ app.get("/contact", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
 
   let UserData = [
     [req.body.email],
@@ -98,11 +95,9 @@ app.post("/", (req, res) => {
   writeData(UserData);
   res.render("index");
 });
-// app.get('/register', (req,res)=>{
-//     res.sendFile(path.join(__dirname, "/form.html"))
-// })
+
 app.post("/register", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
 
   let UserData = [
     [req.body.firstname],
@@ -135,12 +130,15 @@ app.get("/aboutus", (req, res) => {
 app.get("/atalk", (req, res) => {
   res.render("Atalk");
 });
+
 app.get("/va-meet", (req, res) => {
   res.render("va-meet");
 });
+
 app.get("/mentorship", (req, res) => {
   res.render("mentorship-program");
 });
-app.listen(3000, function () {
+
+app.listen(process.env.PORT || 3000, function () {
   console.log("Server running at port 3000");
 });
