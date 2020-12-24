@@ -84,8 +84,7 @@ app.get("/contact", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  // console.log(req.body);
-
+  
   let UserData = [
     [req.body.email],
     [req.body.firstname],
@@ -97,8 +96,7 @@ app.post("/", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  // console.log(req.body);
-
+  
   let UserData = [
     [req.body.firstname],
     [req.body.lastname],
