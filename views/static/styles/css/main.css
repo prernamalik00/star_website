@@ -102,6 +102,10 @@ a:hover {
   border-bottom: 4px solid #810000;
 }
 
+.red-btn {
+  background: #810000;
+}
+
 .top-header {
   background: #d1cdcd;
   display: block;
@@ -123,18 +127,8 @@ a:hover {
 }
 
 .pagehead {
-  font-family: "trebuchet MS";
-  min-height: 270px;
   width: 100%;
-}
-
-.page-title {
-  text-align: center;
-  color: white;
-  font-family: "Nexa Bold", sans-serif;
-  font-weight: bolder;
-  padding-top: 18vh;
-  padding-bottom: 16vh;
+  height: auto;
 }
 
 #navu {
@@ -202,7 +196,6 @@ nav .sub-menu a {
 }
 
 #mainCarousel .carousel-inner img {
-  height: 577px;
   width: 100%;
 }
 
@@ -982,8 +975,7 @@ iframe {
   left: 0;
 }
 
-.a-meet .season-section .watch-btn {
-  background: #810000;
+.a-meet .season-section .red-btn {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1034,6 +1026,11 @@ iframe {
 
 .mentorship .list-points i {
   color: #810000;
+}
+
+.mentorship .join-smp-card {
+  background-color: #f5f5f5;
+  min-height: 17rem;
 }
 
 footer {
