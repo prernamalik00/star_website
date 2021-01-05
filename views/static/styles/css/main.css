@@ -104,6 +104,7 @@ a:hover {
 
 .red-btn {
   background: #810000;
+  color: white;
 }
 
 .top-header {
@@ -128,7 +129,6 @@ a:hover {
 
 .pagehead {
   width: 100%;
-  height: auto;
 }
 
 #navu {
@@ -238,7 +238,7 @@ nav .sub-menu a {
 }
 
 .get-involved-card {
-  padding: 40px;
+  padding: 5.7vh;
 }
 
 .get-involved-card a {
@@ -294,10 +294,10 @@ nav .sub-menu a {
 }
 
 .whatwedo .separator {
-  min-height: 270px;
+  min-height: 38.8vh;
 }
 
-.whatwedo .whatwedocard {
+.whatwedo .whatwedo-card {
   border: 1px solid #f1f1f1;
   perspective: 1000px;
   background-color: transparent;
@@ -317,7 +317,6 @@ nav .sub-menu a {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* Safari */
   backface-visibility: hidden;
 }
 
