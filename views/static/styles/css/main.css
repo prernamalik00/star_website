@@ -35,7 +35,6 @@
 
 body {
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 a,
@@ -394,9 +393,9 @@ nav .sub-menu a {
   overflow: hidden;
 }
 
-.team-member img {
+.team-member-picture {
   border-radius: 5px;
-  background-size: cover;
+  background-size: contain;
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.589);
 }
 
